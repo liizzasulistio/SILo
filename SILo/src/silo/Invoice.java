@@ -16,6 +16,6 @@ public class Invoice
 	public String getInvoiceSupplierName() {return InvoiceSupplierName; }
 	public void setInvoiceSupplierName(String InvoiceSupplierName) { this.InvoiceSupplierName = InvoiceSupplierName; }
 	
-	public String getInvoiceStatus() {return InvoiceStatus; }
+	public String getInvoiceStatus() { return InvoiceStatus; }
 	public void setInvoiceStatus(String InvoiceStatus) { this.InvoiceStatus = InvoiceStatus; }
 }
