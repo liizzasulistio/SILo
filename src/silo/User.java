@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Users 
+public class User 
 {
-	private int UserID;
+	private int UserID; //PRIMARY KEY
 	private String UserName;
 	private String UserType;
 	private String UserEmail;
