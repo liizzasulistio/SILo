@@ -2,6 +2,10 @@
 A repository for SILo Project to fulfill Software Design (D) Assignments.
 
 ---
+# Notes
+`SILo` folder can be opened using Netbeans IDE.
+
+---
 # About SILo
 SILo's name itself is taken from *Sistem Informasi Logistik* or Logistic Information System. There are 3 classes of end-users who will use this software, those are:
 1. Booker: An administrative staff who is responsible on mantaining the master data of the items.
