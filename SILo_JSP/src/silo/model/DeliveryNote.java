@@ -1,4 +1,4 @@
-package silo;
+package silo.model;
 
 public class DeliveryNote 
 {
