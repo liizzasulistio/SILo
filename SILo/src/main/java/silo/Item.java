@@ -10,7 +10,7 @@ package silo;
  * @author liizzasulistio
  */
 public class Item {
-    private int ItemID; // PRIMARY KEY
+    private int ItemID; //PRIMARY KEY
     private String ItemBarcode;
     private String ItemTitle;
     private String ItemDescription;

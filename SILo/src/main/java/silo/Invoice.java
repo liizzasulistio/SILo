@@ -11,9 +11,9 @@ package silo;
  */
 public class Invoice 
 {
-    private int InvoiceNumber; // PRIMARY KEY
-    private int PurchaseOrderNumber_FK; // FOREIGN KEY from Order table 
-    private String InvoiceCustomerName; // Supplier -> Customer
+    private int InvoiceNumber; //PRIMARY KEY
+    private int PurchaseOrderNumber_FK; //FOREIGN KEY from Order table 
+    private String InvoiceCustomerName; //Supplier -> Customer
     private String InvoiceStatus;
 	
     public int getInvoiceNumber() { return InvoiceNumber; }
