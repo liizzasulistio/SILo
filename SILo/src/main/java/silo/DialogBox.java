@@ -9,17 +9,17 @@ package silo;
  *
  * @author liizzasulistio
  */
-public class DialogBox extends javax.swing.JPanel {
-
+public class DialogBox extends javax.swing.JPanel
+{
     /**
      * Creates new form DialogBox
      */
     ItemForm addNewItemForm;
-     
-    public DialogBox(ItemForm addNewItemForm) {
+   
+    public DialogBox(ItemForm addNewItemForm)
+    {
         initComponents();
-        
-         this.addNewItemForm = addNewItemForm;
+        this.addNewItemForm = addNewItemForm;
     }
 
     /**

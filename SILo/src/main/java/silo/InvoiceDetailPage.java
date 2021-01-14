@@ -9,13 +9,14 @@ package silo;
  *
  * @author liizzasulistio
  */
-public class InvoiceDetailPage extends javax.swing.JPanel {
-
+public class InvoiceDetailPage extends javax.swing.JPanel 
+{
     /**
      * Creates new form InvoiceDetailPage
      */
     private InvoiceCtl invoiceCtl;
-    public InvoiceDetailPage() {
+    public InvoiceDetailPage() 
+    {
         initComponents();
     }
 
@@ -88,33 +89,28 @@ public class InvoiceDetailPage extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(invoiceNumberLabel)
+                    .addComponent(invoiceStatus)
+                    .addComponent(invoiceDeliveryDateLabel)
+                    .addComponent(invoiceOrderDateLabel)
+                    .addComponent(supplierNameLabel)
+                    .addComponent(poNumberLabel))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(invoiceNumberLabel)
-                            .addComponent(invoiceStatus)
-                            .addComponent(invoiceDeliveryDateLabel)
-                            .addComponent(invoiceOrderDateLabel)
-                            .addComponent(supplierNameLabel)
-                            .addComponent(poNumberLabel))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(invoiceDeliveryDateLbl)
-                                    .addComponent(invoiceStatusLbl))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(invoiceNumberLbl)
-                                    .addComponent(poNumberLbl)
-                                    .addComponent(supplierNameLbl)
-                                    .addComponent(invoiceOrderDateLbl))
-                                .addContainerGap(184, Short.MAX_VALUE))))
+                            .addComponent(invoiceNumberLbl)
+                            .addComponent(poNumberLbl)
+                            .addComponent(supplierNameLbl)
+                            .addComponent(invoiceOrderDateLbl))
+                        .addContainerGap(184, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(pendingButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(acceptButton)
-                        .addGap(59, 59, 59))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(acceptButton)
+                            .addComponent(pendingButton)
+                            .addComponent(invoiceDeliveryDateLbl)
+                            .addComponent(invoiceStatusLbl))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,11 +139,11 @@ public class InvoiceDetailPage extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(invoiceStatus)
                     .addComponent(invoiceStatusLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pendingButton)
-                    .addComponent(acceptButton))
-                .addGap(33, 33, 33))
+                .addGap(18, 18, 18)
+                .addComponent(pendingButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(acceptButton)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

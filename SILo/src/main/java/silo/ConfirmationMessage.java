@@ -13,14 +13,15 @@ import java.util.logging.Logger;
  *
  * @author liizzasulistio
  */
-public class ConfirmationMessage extends javax.swing.JPanel {
-  private DeliveryNoteForm deliveryNoteForm;
+public class ConfirmationMessage extends javax.swing.JPanel
+{
+    private DeliveryNoteForm deliveryNoteForm;
     /**
      * Creates new form ConfirmationMessage
      */
-     public ConfirmationMessage(DeliveryNoteForm deliveryNoteForm) {
+     public ConfirmationMessage(DeliveryNoteForm deliveryNoteForm)
+     {
         initComponents();
-        
         this.deliveryNoteForm = deliveryNoteForm;
     }
     /**
@@ -35,7 +36,7 @@ public class ConfirmationMessage extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         okButton = new javax.swing.JButton();
 
-        jLabel1.setText("Confirm?");
+        jLabel1.setText("Are you sure you want to proceed?");
 
         okButton.setText("OK");
         okButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -51,21 +52,21 @@ public class ConfirmationMessage extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(jLabel1))
+                        .addGap(157, 157, 157)
+                        .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(168, Short.MAX_VALUE))
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabel1)))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(okButton)
-                .addGap(33, 33, 33))
+                .addGap(45, 45, 45))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -76,7 +77,6 @@ public class ConfirmationMessage extends javax.swing.JPanel {
             Logger.getLogger(ConfirmationMessage.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_okButtonMouseClicked
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

@@ -12,21 +12,26 @@ import java.util.TimerTask;
  *
  * @author liizzasulistio
  */
-public class Alert extends javax.swing.JPanel {
-private int timeLimit;
+public class Alert extends javax.swing.JPanel
+{
+    private int timeLimit;
     /**
      * Creates new form Alert
      */
-      public Alert(int _timeLimit) {
+      public Alert(int _timeLimit) 
+      {
         initComponents();
-                this.setVisible(false);
+        this.setVisible(false);
         timeLimit = _timeLimit;
         
         Timer timer = new Timer();
-        TimerTask task = new TimerTask(){
-            public void run(){
+        TimerTask task = new TimerTask()
+        {
+            public void run()
+            {
                 timeLimit--;
-                if(timeLimit<=0){
+                if(timeLimit<=0)
+                {
                     closeAlert();
                     timer.cancel();
                 }
@@ -35,8 +40,9 @@ private int timeLimit;
          timer.scheduleAtFixedRate(task, 0,1000);
     }
 
-        private void closeAlert(){
-        this.setVisible(false);
+        private void closeAlert()
+        {
+            this.setVisible(false);
         }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,16 +55,16 @@ private int timeLimit;
 
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("Email Sent!");
+        jLabel1.setText("Email has been sent.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(163, 163, 163)
+                .addGap(127, 127, 127)
                 .addComponent(jLabel1)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

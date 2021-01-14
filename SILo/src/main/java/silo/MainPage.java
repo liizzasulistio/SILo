@@ -15,8 +15,8 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author liizzasulistio
  */
-public class MainPage extends javax.swing.JFrame {
-
+public class MainPage extends javax.swing.JFrame 
+{
     /**
      * Creates new form MainPage
      */
@@ -34,15 +34,14 @@ public class MainPage extends javax.swing.JFrame {
     static ItemCtl itemCtl;
     static DialogBox dialogBox;
     
-     public MainPage() throws ParseException {
-        
+    public MainPage() throws ParseException 
+    {
         initComponents();
         jPanel1.setVisible(false);
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         
         dbHandler = new DBHandler();
-        
         
         deliveryNoteDetailPage = new DeliveryNoteDetailPage();
         deliveryNoteForm = new DeliveryNoteForm();
@@ -65,7 +64,6 @@ public class MainPage extends javax.swing.JFrame {
         invoiceDetailPage.setController(invoiceCtl);
         
         deliveryNoteDetailPage.setVisible(false);
-        
     }
 
     /**
@@ -77,6 +75,7 @@ public class MainPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        viewDeliveryNoteBtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listItem = new javax.swing.JTable();
@@ -95,7 +94,6 @@ public class MainPage extends javax.swing.JFrame {
         listDeliveryNote = new javax.swing.JTable();
         searchDeliveryNoteTF = new javax.swing.JTextField();
         searchDeliveyNoteBtn = new javax.swing.JButton();
-        viewDeliveryNoteBtn = new javax.swing.JButton();
         dnEditBtnHolder = new javax.swing.JPanel();
         menuMB = new javax.swing.JMenuBar();
         itemMI = new javax.swing.JMenu();
@@ -104,9 +102,10 @@ public class MainPage extends javax.swing.JFrame {
         createDeliveryNoteMenu = new javax.swing.JMenu();
         viewDeliveryNoteMenu = new javax.swing.JMenu();
 
+        viewDeliveryNoteBtn.setText("View");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listItem.setBackground(new java.awt.Color(255, 153, 153));
         listItem.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -186,14 +185,11 @@ public class MainPage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(searchItemBtn))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(319, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(721, Short.MAX_VALUE)
-                    .addComponent(btnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,13 +201,10 @@ public class MainPage extends javax.swing.JFrame {
                         .addComponent(searchItemTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(searchItemBtn)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(74, Short.MAX_VALUE)
-                    .addComponent(btnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(47, Short.MAX_VALUE)))
         );
 
         listInvoice.setModel(new javax.swing.table.DefaultTableModel(
@@ -253,37 +246,31 @@ public class MainPage extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(searchInvoiceTF, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(searchInvoiceTF, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(searchInvoiceBtn))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(424, Short.MAX_VALUE)
-                    .addComponent(invoiceViewBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(invoiceViewBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchInvoiceTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchInvoiceBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(72, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(invoiceViewBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(41, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(searchInvoiceTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(searchInvoiceBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         listDeliveryNote.setModel(new javax.swing.table.DefaultTableModel(
@@ -309,8 +296,6 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        viewDeliveryNoteBtn.setText("View");
-
         dnEditBtnHolder.setForeground(new java.awt.Color(0, 102, 153));
 
         javax.swing.GroupLayout dnEditBtnHolderLayout = new javax.swing.GroupLayout(dnEditBtnHolder);
@@ -329,37 +314,31 @@ public class MainPage extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(viewDeliveryNoteBtn)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(searchDeliveryNoteTF, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(searchDeliveyNoteBtn))
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(386, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(736, Short.MAX_VALUE)
-                    .addComponent(dnEditBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(searchDeliveryNoteTF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(searchDeliveyNoteBtn))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dnEditBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(281, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchDeliveryNoteTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchDeliveyNoteBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchDeliveyNoteBtn)
+                    .addComponent(searchDeliveryNoteTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(viewDeliveryNoteBtn))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(70, Short.MAX_VALUE)
-                    .addComponent(dnEditBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(39, Short.MAX_VALUE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dnEditBtnHolder, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(73, 73, 73))
         );
 
         menuMB.setBackground(new java.awt.Color(204, 204, 255));
@@ -424,7 +403,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         pack();
@@ -501,16 +480,20 @@ public class MainPage extends javax.swing.JFrame {
         listDeliveryNoteCtl.searchDeliveryNote(searchDeliveryNoteTF.getText());
     }//GEN-LAST:event_searchDeliveyNoteBtnMouseClicked
 
-     public void showListDeliveryNote(List<DeliveryNote> deliveryNotes){
+    public void showListDeliveryNote(List<DeliveryNote> deliveryNotes)
+    {
         DefaultTableModel model = (DefaultTableModel) listDeliveryNote.getModel();
 
         int rowCount = listDeliveryNote.getRowCount();
-        if(rowCount!=0){
-            for(int i = rowCount-1;i>=0;i--){
+        if(rowCount!=0)
+        {
+            for(int i = rowCount-1;i>=0;i--)
+            {
                 model.removeRow(i);
             }
         }
-        for(int i=0;i<deliveryNotes.size();i++){
+        for(int i=0;i<deliveryNotes.size();i++)
+        {
             Object[] row = {deliveryNotes.get(i).getInvoiceNumber(),deliveryNotes.get(i).getDeliveryNoteNumber(),
                             deliveryNotes.get(i).getCustomerName(),deliveryNotes.get(i).getOrderDate(),deliveryNotes.get(i).getDeliveryDate(),
                             deliveryNotes.get(i).getStatus()};
@@ -520,7 +503,8 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
      
-     public void showListItem(List<Item> items) {
+    public void showListItem(List<Item> items) 
+    {
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         jPanel1.setVisible(true);
@@ -529,29 +513,34 @@ public class MainPage extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) listItem.getModel();
 
         int rowCount = listItem.getRowCount();
-        if(rowCount!=0){
-            for(int i = rowCount-1;i>=0;i--){
+        if(rowCount!=0)
+        {
+            for(int i = rowCount-1;i>=0;i--)
+            {
                 model.removeRow(i);
             }
         }
-        for(int i=0;i<items.size();i++){
+        for(int i=0;i<items.size();i++)
+        {
             Object[] row = {items.get(i).getId(), items.get(i).getTitle(), items.get(i).getManufacturer(), items.get(i).getNumberOfStock()};
             model.addRow(row);
             
-            showItemEditButton(items, i);
-            
+            showItemEditButton(items, i);   
         }
     }
     
-     public void showItemEditButton(List<Item> items, int i){
+     public void showItemEditButton(List<Item> items, int i)
+     {
         editButtons = new javax.swing.JButton[items.size()];
         
         editButtons[i] = new javax.swing.JButton("Edit");
         editButtons[i].setSize(60,15);
         editButtons[i].setLocation(0, 16 * i);
         editButtons[i].setName(items.get(i).toString());
-        editButtons[i].addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        editButtons[i].addMouseListener(new java.awt.event.MouseAdapter() 
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt) 
+            {
                 onEditClick(items.get(i), i);
             }
         });
@@ -559,15 +548,18 @@ public class MainPage extends javax.swing.JFrame {
         btnHolder.add(editButtons[i]);
     }
     
-     public void showDeliveryNoteViewButton(List<DeliveryNote> deliveryNotes, int i){
+     public void showDeliveryNoteViewButton(List<DeliveryNote> deliveryNotes, int i)
+     {
         dnEditButtons = new javax.swing.JButton[deliveryNotes.size()];
         
         dnEditButtons[i] = new javax.swing.JButton("View");
         dnEditButtons[i].setSize(60,15);
         dnEditButtons[i].setLocation(0, 16 * i);
         dnEditButtons[i].setName(deliveryNotes.get(i).toString());
-        dnEditButtons[i].addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
+        dnEditButtons[i].addMouseListener(new java.awt.event.MouseAdapter() 
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt) 
+            {
                 onViewClick(deliveryNotes.get(i), i);
             }
         });
@@ -575,19 +567,23 @@ public class MainPage extends javax.swing.JFrame {
         dnEditBtnHolder.add(dnEditButtons[i]);
     }
      
-      public void onEditClick(Item item, int index){
-        itemCtl.requestEditItemForm(item, index);
+    public void onEditClick(Item item, int index)
+    {
+       itemCtl.requestEditItemForm(item, index);
     }
     
-    public void onViewClick(DeliveryNote deliveryNote, int index){
+    public void onViewClick(DeliveryNote deliveryNote, int index)
+    {
         deliveryNoteCtl.getDeliveryNoteDesciption(deliveryNote, index);
     }
     
-    public void onViewClick(Invoice invoice, int index){
+    public void onViewClick(Invoice invoice, int index)
+    {
         invoiceCtl.getInvoiceDescription(invoice, index);
     }
     
-     public void showListInvoice(List<Invoice> invoices) {
+    public void showListInvoice(List<Invoice> invoices)
+    {
         jPanel1.setVisible(false);
         jPanel3.setVisible(false);
         jPanel2.setVisible(true); 
@@ -609,7 +605,9 @@ public class MainPage extends javax.swing.JFrame {
             showInvoiceViewButton(invoices, i);
         }
     }
-     public void showInvoiceViewButton(List<Invoice> invoices, int i){
+     
+    public void showInvoiceViewButton(List<Invoice> invoices, int i)
+    {
         invoiceViewBtns = new javax.swing.JButton[invoices.size()];
         
         invoiceViewBtns[i] = new javax.swing.JButton("View");
@@ -624,55 +622,26 @@ public class MainPage extends javax.swing.JFrame {
             
         invoiceViewBtnHolder.add(invoiceViewBtns[i]);
     }
-      public void refreshItemList(){
+     
+    public void refreshItemList()
+    {
         listItemCtl.getListItem();
-        //refresh data on table
     }
     
-    public void refreshDeliveryNoteList(){
+    public void refreshDeliveryNoteList()
+    {
         listDeliveryNoteCtl.getListDeliveryNote();
     }
     
-    public void refreshInvoiceList(){
+    public void refreshInvoiceList()
+    {
         listInvoiceCtl.getListInvoice();
     }
-     
-     
      
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new MainPage().setVisible(true);
-//            }
-//        });
-//    }
+
      public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -51,9 +51,8 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("invoice number :");
+        jLabel1.setText("Invoice Number:");
 
-        emailBtn.setBackground(new java.awt.Color(153, 153, 255));
         emailBtn.setText("Email");
         emailBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -61,7 +60,6 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
             }
         });
 
-        printBtn.setBackground(new java.awt.Color(153, 153, 255));
         printBtn.setText("Print");
         printBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -69,7 +67,6 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
             }
         });
 
-        preparingBtn.setBackground(new java.awt.Color(153, 153, 255));
         preparingBtn.setText("preparing");
         preparingBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -77,7 +74,6 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
             }
         });
 
-        signBtn.setBackground(new java.awt.Color(153, 153, 255));
         signBtn.setText("sign");
         signBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -85,7 +81,6 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
             }
         });
 
-        pendingBtn.setBackground(new java.awt.Color(153, 153, 255));
         pendingBtn.setText("pending");
         pendingBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -93,15 +88,15 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("delivery note number :");
+        jLabel2.setText("Delivery Note Number:");
 
-        jLabel3.setText("customer name :");
+        jLabel3.setText("Customer Name:");
 
-        jLabel4.setText("order date : ");
+        jLabel4.setText("Order Date:");
 
-        jLabel5.setText("delivery date :");
+        jLabel5.setText("Delivery Date:");
 
-        jLabel6.setText("status :");
+        jLabel6.setText("Status:");
 
         customerNameLbl.setText("jLabel7");
 
@@ -135,29 +130,26 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel2)
                                         .addGap(2, 2, 2)
-                                        .addComponent(deliveryNoteNumberLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(customerNameLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(orderDateLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(deliveryDateLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(statusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(deliveryNoteNumberLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGap(113, 113, 113))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(printBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(signBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(110, 110, 110))))))
+                                .addGap(110, 110, 110))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(53, 53, 53)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(customerNameLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(orderDateLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(deliveryDateLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(statusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(66, 66, 66))))))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -245,55 +237,25 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(DeliveryNoteDetailPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(DeliveryNoteDetailPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(DeliveryNoteDetailPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(DeliveryNoteDetailPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new DeliveryNoteDetailPage().setVisible(true);
-//            }
-//        });
-//    }
-     public void setController(DeliveryNoteCtl deliveryNoteCtl){
+    public void setController(DeliveryNoteCtl deliveryNoteCtl)
+    {
         this.deliveryNoteCtl = deliveryNoteCtl;
     }
     
-    public void sendSoftCopyDone(){
-        //berhasil dikirim
+    public void sendSoftCopyDone()
+    {
         sendingForm.setVisible(false);
         deliveryNoteCtl.sendSoftCopyDone();
     }
     
-    public void requestPrint(){
+    public void requestPrint()
+    {
         printDialog.setVisible(false);
-        
         deliveryNoteCtl.requestPrint();
-        
     }
     
-    public void setCurrentDeliveryNote(DeliveryNote dn){
+    public void setCurrentDeliveryNote(DeliveryNote dn)
+    {
         invoiceNumberLbl.setText(String.valueOf(dn.getInvoiceNumber()));
         deliveryNoteNumberLbl.setText(String.valueOf(dn.getDeliveryNoteNumber()));
         customerNameLbl.setText(dn.getCustomerName());
@@ -305,7 +267,6 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
     private DeliveryNoteCtl deliveryNoteCtl;
     private SendingForm sendingForm;
     private PrintDialog printDialog;
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel customerNameLbl;

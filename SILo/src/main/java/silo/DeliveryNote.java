@@ -13,81 +13,95 @@ import java.util.Date;
  *
  * @author liizzasulistio
  */
-public class DeliveryNote {
-    public int invoiceNumber;
+public class DeliveryNote 
+{
+    public int deliveryNoteInvoiceNumber;
     public int deliveryNoteNumber;
-    public String customerName;
-    Date orderDate = new Date();
-    Date deliveryDate = new Date();
+    public String deliveryNoteCustomerName;
+    Date deliveryNoteOrderDate = new Date();
+    Date deliveryNoteDeliveryDate = new Date();
     private String deliveryNoteStatus;
     
     SimpleDateFormat formatter;
 
-    public DeliveryNote(int invoiceNumber, int deliveryNoteNumber, String customerName, Date orderDate, Date deliveryDate, String status) throws ParseException{
-        this.invoiceNumber = invoiceNumber;
+    public DeliveryNote(int invoiceNumber, int deliveryNoteNumber, String customerName, Date orderDate, Date deliveryDate, String status) throws ParseException
+    {
+        this.deliveryNoteInvoiceNumber = invoiceNumber;
         this.deliveryNoteNumber = deliveryNoteNumber;
-        this.customerName = customerName;
+        this.deliveryNoteCustomerName = customerName;
         formatter =new SimpleDateFormat("dd-MMM-yyyy"); 
-        this.orderDate = orderDate;
-        this.deliveryDate = deliveryDate;
+        this.deliveryNoteOrderDate = orderDate;
+        this.deliveryNoteDeliveryDate = deliveryDate;
         this.deliveryNoteStatus = status;
     }
     
-    public int getInvoiceNumber() {
-        return invoiceNumber;
+    public int getInvoiceNumber() 
+    {
+        return deliveryNoteInvoiceNumber;
     }
 
-    public int getDeliveryNoteNumber() {
+    public int getDeliveryNoteNumber() 
+    {
         return deliveryNoteNumber;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public String getCustomerName() 
+    {
+        return deliveryNoteCustomerName;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public Date getOrderDate() 
+    {
+        return deliveryNoteOrderDate;
     }
 
-    public Date getDeliveryDate() {
-        return deliveryDate;
+    public Date getDeliveryDate() 
+    {
+        return deliveryNoteDeliveryDate;
     }
 
-    public String getStatus() {
+    public String getStatus() 
+    {
         return deliveryNoteStatus;
     }
 
-    public void setInvoiceNumber(int invoiceNumber) {
-        this.invoiceNumber = invoiceNumber;
+    public void setInvoiceNumber(int invoiceNumber) 
+    {
+        this.deliveryNoteInvoiceNumber = invoiceNumber;
     }
 
-    public void setDeliveryNoteNumber(int deliveryNoteNumber) {
+    public void setDeliveryNoteNumber(int deliveryNoteNumber) 
+    {
         this.deliveryNoteNumber = deliveryNoteNumber;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setCustomerName(String customerName) 
+    {
+        this.deliveryNoteCustomerName = customerName;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setOrderDate(Date orderDate) 
+    {
+        this.deliveryNoteOrderDate = orderDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
-        this.deliveryDate = deliveryDate;
+    public void setDeliveryDate(Date deliveryDate) 
+    {
+        this.deliveryNoteDeliveryDate = deliveryDate;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(String status) 
+    {
         this.deliveryNoteStatus = status;
     }
     
-    public String getOrderDateString() {
-        return formatter.format(orderDate);
+    public String getOrderDateString() 
+    {
+        return formatter.format(deliveryNoteOrderDate);
     }
 
-    public String getDeliveryDateString() {
-        return formatter.format(deliveryDate);
+    public String getDeliveryDateString() 
+    {
+        return formatter.format(deliveryNoteDeliveryDate);
     }
-    
-    
 }

@@ -19,40 +19,32 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="invoiceNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="invoiceStatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="invoiceDeliveryDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="invoiceOrderDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="supplierNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="poNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="invoiceNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="poNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="supplierNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="invoiceOrderDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="184" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="invoiceNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="invoiceStatus" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="invoiceDeliveryDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="invoiceOrderDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="supplierNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="poNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="acceptButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="pendingButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="invoiceDeliveryDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="invoiceStatusLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="invoiceDeliveryDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="invoiceStatusLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="invoiceNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="poNumberLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="supplierNameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="invoiceOrderDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="184" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="pendingButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="acceptButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -91,12 +83,11 @@
                   <Component id="invoiceStatus" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="invoiceStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="43" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="pendingButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="acceptButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="pendingButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="acceptButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="23" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

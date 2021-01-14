@@ -11,29 +11,30 @@ import java.util.List;
  *
  * @author liizzasulistio
  */
-public class DaftarInvoiceCtl {
-     private DBHandler dbHandler;
+public class DaftarInvoiceCtl
+{
+    private DBHandler dbHandler;
     private MainPage mainpage;
     
-    public DaftarInvoiceCtl(DBHandler dbHandler, MainPage mainpage){
+    public DaftarInvoiceCtl(DBHandler dbHandler, MainPage mainpage)
+    {
         this.dbHandler = dbHandler;
         this.mainpage = mainpage;
     }
     
-    public void getListInvoice(){
+    public void getListInvoice()
+    {
         List<Invoice> invoices = dbHandler.getListInvoice();
         mainpage.showListInvoice(invoices);
     }
     
-    private Invoice[] createInvoice(String[] results) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private Invoice[] createInvoice(String[] results)
+    {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
-     public void searchInvoice(String keyword){
-//        String[] results =   dbHandler.getListInvoice(keyword);
-//        Invoice[] invoices = createInvoice(results);
-//        mainpage.showListInvoice(invoices);
-
+     public void searchInvoice(String keyword)
+     {
         List<Invoice> inv = dbHandler.searchInvoice(keyword);
         mainpage.showListInvoice(inv);
     }

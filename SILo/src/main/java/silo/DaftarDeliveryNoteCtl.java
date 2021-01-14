@@ -11,23 +11,26 @@ import java.util.List;
  *
  * @author liizzasulistio
  */
-public class DaftarDeliveryNoteCtl {
+public class DaftarDeliveryNoteCtl 
+{
     private DBHandler dbHandler;
     private MainPage mainpage;
     
-    public DaftarDeliveryNoteCtl(DBHandler dBHandler, MainPage mainpage){
+    public DaftarDeliveryNoteCtl(DBHandler dBHandler, MainPage mainpage)
+    {
         this.dbHandler = dBHandler;
         this.mainpage = mainpage;
     }
     
-    public void getListDeliveryNote(){
+    public void getListDeliveryNote()
+    {
         List<DeliveryNote> deliveryNotes = dbHandler.getListDeliveryNote();
         mainpage.showListDeliveryNote(deliveryNotes);
     }
     
-    public void searchDeliveryNote(String keyword){
+    public void searchDeliveryNote(String keyword)
+    {
         List<DeliveryNote> ldn = dbHandler.searchDeliveryNote(keyword);
         mainpage.showListDeliveryNote(ldn);
     }
-    
 }
