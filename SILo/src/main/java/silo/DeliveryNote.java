@@ -5,34 +5,89 @@
  */
 package silo;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author liizzasulistio
  */
 public class DeliveryNote {
-    private int DeliveryNoteNumber; //PRIMARY KEY
-	private String DeliveryNoteStatus;
-	private String DeliveryNoteDescription;
-	private int CustomerID_FK; //FOREIGN KEY from Customer table
-	private int InvoiceNumber_FK; //FOREIGN KEY from Invoice table
-	private int PurchaseOrderNumber_FK; //FOREIGN KEY from PurchasOrder table
-	
-	public int getDeliveryNoteNumber() { return DeliveryNoteNumber; }
-	public void setDeliveryNoteNumber(int DeliveryNoteNumber) { this.DeliveryNoteNumber = DeliveryNoteNumber; }
-	
-	public String getDeliveryNoteStatus() { return DeliveryNoteStatus; }
-	public void setDeliveryNoteStatus(String DeliveryNoteStatus) { this.DeliveryNoteStatus = DeliveryNoteStatus; }
-	
-	public String getDeliveryNoteDescription() { return DeliveryNoteDescription; }
-	public void setDeliveryNoteDescription(String DeliveryNoteDescription) { this.DeliveryNoteDescription = DeliveryNoteDescription; }
+    public int invoiceNumber;
+    public int deliveryNoteNumber;
+    public String customerName;
+    Date orderDate = new Date();
+    Date deliveryDate = new Date();
+    private String deliveryNoteStatus;
+    
+    SimpleDateFormat formatter;
 
-	public int getCustomerID_FK() { return CustomerID_FK; }
-	public void setCustomerID_FK(int CustomerID_FK) { this.CustomerID_FK = CustomerID_FK; }
-	
-	public int getInvoiceNumber_FK() { return InvoiceNumber_FK; }
-	public void setInvoiceNumber_FK(int InvoiceNumber_FK) { this.InvoiceNumber_FK = InvoiceNumber_FK; }
-	
-	public int getPurchaseOrderNumber_FK() { return PurchaseOrderNumber_FK; }
-	public void setPurchaseOrderNumber_FK(int PurchaseOrderNumber_FK) { this.PurchaseOrderNumber_FK = PurchaseOrderNumber_FK;}
+    public DeliveryNote(int invoiceNumber, int deliveryNoteNumber, String customerName, Date orderDate, Date deliveryDate, String status) throws ParseException{
+        this.invoiceNumber = invoiceNumber;
+        this.deliveryNoteNumber = deliveryNoteNumber;
+        this.customerName = customerName;
+        formatter =new SimpleDateFormat("dd-MMM-yyyy"); 
+        this.orderDate = orderDate;
+        this.deliveryDate = deliveryDate;
+        this.deliveryNoteStatus = status;
+    }
+    
+    public int getInvoiceNumber() {
+        return invoiceNumber;
+    }
+
+    public int getDeliveryNoteNumber() {
+        return deliveryNoteNumber;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public Date getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public String getStatus() {
+        return deliveryNoteStatus;
+    }
+
+    public void setInvoiceNumber(int invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
+    public void setDeliveryNoteNumber(int deliveryNoteNumber) {
+        this.deliveryNoteNumber = deliveryNoteNumber;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public void setDeliveryDate(Date deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public void setStatus(String status) {
+        this.deliveryNoteStatus = status;
+    }
+    
+    public String getOrderDateString() {
+        return formatter.format(orderDate);
+    }
+
+    public String getDeliveryDateString() {
+        return formatter.format(deliveryDate);
+    }
+    
     
 }

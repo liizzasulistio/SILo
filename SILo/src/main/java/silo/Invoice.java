@@ -5,26 +5,88 @@
  */
 package silo;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author liizzasulistio
  */
 public class Invoice 
 {
-    private int InvoiceNumber; /* PRIMARY KEY */
-    private int PurchaseOrderNumber_FK; /* FOREIGN KEY from Order table */
-    private String InvoiceCustomerName; /* Supplier -> Customer */
-    private String InvoiceStatus;
-	
-    public int getInvoiceNumber() { return InvoiceNumber; }
-    public void setInvoiceNumber(int InvoiceNumber) { this.InvoiceNumber = InvoiceNumber; }
-	
-    public int getPurchaseOrderNumber_FK() { return PurchaseOrderNumber_FK; }
-    public void setPurchaseOrderNumber_FK(int PurchaseOrderNumber_FK) { this.PurchaseOrderNumber_FK = PurchaseOrderNumber_FK; }
-	
-    public String getInvoiceSupplierName() {return InvoiceCustomerName; }
-    public void setInvoiceSupplierName(String InvoiceCustomerName) { this.InvoiceCustomerName = InvoiceCustomerName; }
-	
-    public String getInvoiceStatus() { return InvoiceStatus; }
-    public void setInvoiceStatus(String InvoiceStatus) { this.InvoiceStatus = InvoiceStatus; }
+   private int invoiceNumber;
+   private int PONumber;
+   private String supplierName;
+   Date orderDate = new Date();
+   Date deliveryDate = new Date();
+   private String status;
+    
+   SimpleDateFormat formatter;
+
+   public Invoice(int invoiceNumber, int PONumber, String supplierName, Date orderDate, Date deliveryDate, String status){
+       this.invoiceNumber = invoiceNumber;
+       this.PONumber = PONumber;
+       this.supplierName = supplierName;
+       this.orderDate = orderDate;
+       this.deliveryDate = deliveryDate;
+       this.status = status;
+        
+       formatter =new SimpleDateFormat("dd-MMM-yyyy"); 
+   }
+    
+    public int getInvoiceNumber() {
+        return invoiceNumber;
+    }
+
+    public int getPONumber() {
+        return PONumber;
+    }
+
+    public String getSupplierName() {
+        return supplierName;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public Date getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setInvoiceNumber(int invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
+    public void setPONumber(int PONumber) {
+        this.PONumber = PONumber;
+    }
+
+    public void setSupplierName(String supplierName) {
+        this.supplierName = supplierName;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public void setDeliveryDate(Date deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    public String getOrderDateString() {
+        return formatter.format(orderDate);
+    }
+
+    public String getDeliveryDateString() {
+        return formatter.format(deliveryDate);
+    }
 }
