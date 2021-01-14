@@ -5,7 +5,6 @@
  */
 package silo;
 
-<<<<<<< HEAD
 import java.text.ParseException;
 import java.util.List;
 import java.util.logging.Level;
@@ -67,42 +66,6 @@ public class MainPage extends javax.swing.JFrame {
         
         deliveryNoteDetailPage.setVisible(false);
         
-=======
-import java.awt.CardLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.AbstractAction;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-
-/**
- *
- * @author Waldo
- */
-public class MainPage extends javax.swing.JFrame {
-    
-    private static JPanel contentPane;
-    private static CardLayout cardLayout;
-    
-    /**
-     * Creates new form MainPage
-     */
-    public MainPage() {
-        setTitle("SILo");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(-10, -3, 1382, 778);
-        
-        cardLayout = new CardLayout();
-        contentPane = new JPanel();
-        contentPane.setLayout(cardLayout);
-        setContentPane(contentPane);
-        
-        Menu newMenu = new Menu();
-        this.setJMenuBar(newMenu.getMenuBar());
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
     }
 
     /**
@@ -114,7 +77,6 @@ public class MainPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listItem = new javax.swing.JTable();
@@ -441,15 +403,10 @@ public class MainPage extends javax.swing.JFrame {
 
         setJMenuBar(menuMB);
 
-=======
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -468,19 +425,11 @@ public class MainPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(42, Short.MAX_VALUE))
-=======
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void itemMIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemMIMouseClicked
 
         jPanel2.setVisible(false);
@@ -725,12 +674,6 @@ public class MainPage extends javax.swing.JFrame {
 //        });
 //    }
      public static void main(String args[]) {
-=======
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -753,17 +696,13 @@ public class MainPage extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-<<<<<<< HEAD
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-=======
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-<<<<<<< HEAD
                 try {
                     new MainPage().setVisible(true);
                 } catch (ParseException ex) {
@@ -805,18 +744,5 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JTextField searchItemTF;
     private javax.swing.JButton viewDeliveryNoteBtn;
     private javax.swing.JMenu viewDeliveryNoteMenu;
-=======
-                new MainPage().setVisible(true);
-            }
-        });
-    }
-    
-    public static void showNewDN() {
-        contentPane.add(new Form().getNewDNForm(), "newDNForm");
-        cardLayout.show(contentPane, "newDNForm");
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
     // End of variables declaration//GEN-END:variables
 }

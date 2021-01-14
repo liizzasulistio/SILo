@@ -18,7 +18,6 @@ import javax.swing.JMenuItem;
  */
 public class Menu {
     
-<<<<<<< HEAD
 //    private JMenuBar menuBar = new JMenuBar();
 //    
 //    public Menu() {
@@ -38,25 +37,4 @@ public class Menu {
 //        return menuBar;
 //    }
 //    
-=======
-    private JMenuBar menuBar = new JMenuBar();
-    
-    public Menu() {
-        JMenu menu = new JMenu("Menu");
-        menuBar.add(menu);
-        JMenuItem createDNMenu = new JMenuItem(new AbstractAction() {
-            public void actionPerformed(ActionEvent e) {
-                MainPage.showNewDN();
-            }
-        });
-        createDNMenu.setText("Create Delivery Note");
-        menu.add(createDNMenu);
-        
-    }
-    
-    public JMenuBar getMenuBar() {
-        return menuBar;
-    }
-    
->>>>>>> c1328abe17604fec6deaff595e32728a075f3dd6
 }
