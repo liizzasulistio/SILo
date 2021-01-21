@@ -7,16 +7,15 @@ package silo;
 
 /**
  *
- * @author liizzasulistio
+ * @author Waldo
  */
-public class InvoiceDetailPage extends javax.swing.JPanel 
-{
+public class InvoiceDetailPage extends javax.swing.JFrame {
+
     /**
-     * Creates new form InvoiceDetailPage
+     * Creates new form InvDP
      */
     private InvoiceCtl invoiceCtl;
-    public InvoiceDetailPage() 
-    {
+    public InvoiceDetailPage() {
         initComponents();
     }
 
@@ -29,6 +28,12 @@ public class InvoiceDetailPage extends javax.swing.JPanel
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        invoiceDeliveryDateLbl = new javax.swing.JLabel();
+        invoiceOrderDateLbl = new javax.swing.JLabel();
+        supplierNameLbl = new javax.swing.JLabel();
+        poNumberLbl = new javax.swing.JLabel();
+        pendingButton = new javax.swing.JButton();
+        acceptButton = new javax.swing.JButton();
         invoiceNumberLabel = new javax.swing.JLabel();
         invoiceNumberLbl = new javax.swing.JLabel();
         poNumberLabel = new javax.swing.JLabel();
@@ -37,28 +42,8 @@ public class InvoiceDetailPage extends javax.swing.JPanel
         invoiceDeliveryDateLabel = new javax.swing.JLabel();
         invoiceStatus = new javax.swing.JLabel();
         invoiceStatusLbl = new javax.swing.JLabel();
-        invoiceDeliveryDateLbl = new javax.swing.JLabel();
-        invoiceOrderDateLbl = new javax.swing.JLabel();
-        supplierNameLbl = new javax.swing.JLabel();
-        poNumberLbl = new javax.swing.JLabel();
-        pendingButton = new javax.swing.JButton();
-        acceptButton = new javax.swing.JButton();
 
-        invoiceNumberLabel.setText("Invoice Number");
-
-        invoiceNumberLbl.setText("jLabel7");
-
-        poNumberLabel.setText("PO Number");
-
-        supplierNameLabel.setText("Supplier Name");
-
-        invoiceOrderDateLabel.setText("Order Date");
-
-        invoiceDeliveryDateLabel.setText("Delivery Date");
-
-        invoiceStatus.setText("Status");
-
-        invoiceStatusLbl.setText("jLabel7");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         invoiceDeliveryDateLbl.setText("jLabel7");
 
@@ -82,8 +67,24 @@ public class InvoiceDetailPage extends javax.swing.JPanel
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        invoiceNumberLabel.setText("Invoice Number");
+
+        invoiceNumberLbl.setText("jLabel7");
+
+        poNumberLabel.setText("PO Number");
+
+        supplierNameLabel.setText("Supplier Name");
+
+        invoiceOrderDateLabel.setText("Order Date");
+
+        invoiceDeliveryDateLabel.setText("Delivery Date");
+
+        invoiceStatus.setText("Status");
+
+        invoiceStatusLbl.setText("jLabel7");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -103,7 +104,7 @@ public class InvoiceDetailPage extends javax.swing.JPanel
                             .addComponent(poNumberLbl)
                             .addComponent(supplierNameLbl)
                             .addComponent(invoiceOrderDateLbl))
-                        .addContainerGap(184, Short.MAX_VALUE))
+                        .addContainerGap(219, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(acceptButton)
@@ -143,18 +144,20 @@ public class InvoiceDetailPage extends javax.swing.JPanel
                 .addComponent(pendingButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(acceptButton)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void pendingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendingButtonMouseClicked
-        // TODO add your handling code here:
+        invoiceCtl.requestChangeStatus("pending", invoiceNumberLbl.getText());
     }//GEN-LAST:event_pendingButtonMouseClicked
 
     private void acceptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acceptButtonMouseClicked
-        // TODO add your handling code here:
+        invoiceCtl.requestChangeStatus("completed", invoiceNumberLbl.getText());
     }//GEN-LAST:event_acceptButtonMouseClicked
-   public void setCurrentInvoice(Invoice invoice){
+    public void setCurrentInvoice(Invoice invoice){
         invoiceNumberLbl.setText(String.valueOf(invoice.getInvoiceNumber()));
         poNumberLbl.setText(String.valueOf(invoice.getPONumber()));
         supplierNameLbl.setText(invoice.getSupplierName());
