@@ -130,7 +130,7 @@ public class DBHandler
     
     public void insertData(String id,String barcode,String description, String manufacturer, String title, String url, int stock)
     {
-        items.add(new Item(id,barcode,description, manufacturer, title, url, stock));
+        items.add(new Item(id, barcode, title, description, manufacturer, url, stock));
         try
         {
             FileWriter writer = new FileWriter("ItemDB.txt");
