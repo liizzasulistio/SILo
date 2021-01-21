@@ -11,19 +11,18 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author liizzasulistio
+ * @author Waldo
  */
-public class ConfirmationMessage extends javax.swing.JPanel
-{
+public class ConfirmationMessage extends javax.swing.JFrame {
     private DeliveryNoteForm deliveryNoteForm;
     /**
      * Creates new form ConfirmationMessage
      */
-     public ConfirmationMessage(DeliveryNoteForm deliveryNoteForm)
-     {
+    public ConfirmationMessage(DeliveryNoteForm deliveryNoteForm) {
         initComponents();
         this.deliveryNoteForm = deliveryNoteForm;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,6 +35,9 @@ public class ConfirmationMessage extends javax.swing.JPanel
         jLabel1 = new javax.swing.JLabel();
         okButton = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(354, 163));
+
         jLabel1.setText("Are you sure you want to proceed?");
 
         okButton.setText("OK");
@@ -45,8 +47,8 @@ public class ConfirmationMessage extends javax.swing.JPanel
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -68,6 +70,8 @@ public class ConfirmationMessage extends javax.swing.JPanel
                 .addComponent(okButton)
                 .addGap(45, 45, 45))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void okButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_okButtonMouseClicked
